@@ -21,11 +21,10 @@ public class SimpleEliza {
         System.out.println("Good day. What is your problem ?");
         System.out.println("-------------------------------------");
 
-            while(!(answer.equalsIgnoreCase(inAns))) {
-                while (!(answer.equalsIgnoreCase("Q"))) {
+            while(!(answer.equalsIgnoreCase(inAns))&&!(answer.equalsIgnoreCase("Q"))) {
 
-                    if (!answer.equalsIgnoreCase(inAns)) {
-                        if (!(answer.equalsIgnoreCase("Q"))) {
+                    if (!answer.equalsIgnoreCase(inAns)|| !(answer.equalsIgnoreCase("Q"))) {
+
                             System.out.println("\nEnter your response here or Q to quit: ");
                             answer = input.nextLine();
                             System.out.println("***** " + answer + "*****");
@@ -33,13 +32,10 @@ public class SimpleEliza {
                         else{
                             break;
                         }
-                    }
+
                     System.out.println("\nEnter your response here or Q to quit: ");
                     answer = input.nextLine();
+                    System.out.println("***** " + answer + "*****");
                 }
-                System.out.println("\nEnter your response here or Q to quit: ");
-                answer = input.nextLine();
-            }
-
-    }
+  }
 }
